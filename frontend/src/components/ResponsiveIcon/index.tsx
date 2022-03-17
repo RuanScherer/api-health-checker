@@ -1,18 +1,18 @@
-import { IconType } from "react-icons"
+import { IconType } from "react-icons";
 
 const sizes = {
-    sm: '1rem',
-    md: '1.2rem',
-    lg: '1.4rem'
+  sm: "1rem",
+  md: "1.2rem",
+  lg: "1.4rem",
+};
+
+interface IResponsiveIconProps {
+  icon: IconType;
+  size?: "sm" | "md" | "lg";
 }
 
-interface ResponsiveIconProps {
-    icon: IconType
-    size?: 'sm' | 'md' | 'lg'
+function ResponsiveIcon({ icon: Icon, size = "md" }: IResponsiveIconProps) {
+  return <Icon size={sizes[size]} />;
 }
 
-const ResponsiveIcon = ({ icon: Icon, size }: ResponsiveIconProps) => (
-    <Icon size={sizes[size ?? 'md']} />
-)
-
-export { ResponsiveIcon }
+export { ResponsiveIcon };

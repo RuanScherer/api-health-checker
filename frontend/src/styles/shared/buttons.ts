@@ -1,62 +1,62 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const defaultButtonSizes = {
   sm: {
-    gap: '.4rem',
-    padding: '.5rem .8rem',
-    fontSize: '0.8rem'
+    gap: ".4rem",
+    padding: ".5rem .8rem",
+    fontSize: "0.8rem",
   },
   md: {
-    gap: '.5rem',
-    padding: '.6rem .9rem',
-    fontSize: '0.875rem'
+    gap: ".5rem",
+    padding: ".6rem .9rem",
+    fontSize: "0.875rem",
   },
   lg: {
-    gap: '.8rem',
-    padding: '.8rem 1.1rem',
-    fontSize: '1rem'
-  }
+    gap: ".8rem",
+    padding: ".8rem 1.1rem",
+    fontSize: "1rem",
+  },
+};
+
+interface IDefaultButtonProps {
+  backgroundColor?: string;
+  size?: "sm" | "md" | "lg";
 }
 
-interface DefaultButtonProps {
-  backgroundColor?: string
-  size?: 'sm' | 'md' | 'lg'
-}
-
-const DefaultButton = styled.button<DefaultButtonProps>`
+const DefaultButton = styled.button<IDefaultButtonProps>`
   display: flex;
   align-items: center;
-  gap: ${props => defaultButtonSizes[props.size ?? 'md'].gap};
+  gap: ${(props) => defaultButtonSizes[props.size ?? "md"].gap};
 
   border: 0;
-  padding: ${props => defaultButtonSizes[props.size ?? 'md'].padding};
+  padding: ${(props) => defaultButtonSizes[props.size ?? "md"].padding};
 
-  background-color: ${props => props.backgroundColor ?? 'var(--gray-100)'};
+  background-color: ${(props) => props.backgroundColor ?? "var(--gray-100)"};
 
-  font-size: ${props => defaultButtonSizes[props.size ?? 'md'].fontSize};
+  font-size: ${(props) => defaultButtonSizes[props.size ?? "md"].fontSize};
 
   &:hover {
     filter: brightness(0.9);
   }
-`
+`;
 
 const iconButtonSizes = {
   sm: {
-    padding: '.4rem'
+    padding: ".4rem",
   },
   md: {
-    padding: '.5rem'
+    padding: ".5rem",
   },
   lg: {
-    padding: '.8rem'
-  }
-}
+    padding: ".8rem",
+  },
+};
 
 export const IconButton = styled(DefaultButton)`
-  padding: ${props => iconButtonSizes[props.size ?? 'md'].padding};
+  padding: ${(props) => iconButtonSizes[props.size ?? "md"].padding};
   border-radius: 100%;
-`
+`;
 
 export const FilledButton = styled(DefaultButton)`
   border-radius: 8px;
-`
+`;

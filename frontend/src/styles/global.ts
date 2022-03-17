@@ -1,5 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
-import { colors } from './constants/colors'
+import { createGlobalStyle } from "styled-components";
+
+import { colors } from "./constants/colors";
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -49,7 +50,6 @@ const GlobalStyle = createGlobalStyle`
     opacity: .6;
     cursor: not-allowed;
   }
-`
+`;
 
-
-export { GlobalStyle }
+export { GlobalStyle };
