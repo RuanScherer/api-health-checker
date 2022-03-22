@@ -20,18 +20,22 @@ const defaultButtonSizes = {
 
 interface IDefaultButtonProps {
   backgroundColor?: string;
+  color?: string;
+  centralize?: boolean;
   size?: "sm" | "md" | "lg";
 }
 
 const DefaultButton = styled.button<IDefaultButtonProps>`
   display: flex;
   align-items: center;
+  justify-content: ${(props) => (props.centralize ? "center" : "flex-start")};
   gap: ${(props) => defaultButtonSizes[props.size ?? "md"].gap};
 
   border: 0;
   padding: ${(props) => defaultButtonSizes[props.size ?? "md"].padding};
 
   background-color: ${(props) => props.backgroundColor ?? "var(--gray-100)"};
+  color: ${(props) => props.color ?? "#040044"};
 
   font-size: ${(props) => defaultButtonSizes[props.size ?? "md"].fontSize};
 
