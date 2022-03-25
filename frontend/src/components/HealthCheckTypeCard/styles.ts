@@ -61,9 +61,9 @@ export const HealthCheckTypeDescription = styled.div<IHealthCheckTypeDescription
     font-size: 0.75rem;
     font-weight: 500;
     padding: 0.05rem 0.5rem;
-    border: 1px solid var(--cyan-500);
+    border: 1px solid ${(props) => props.chipColor};
     border-radius: 1rem;
 
-    color: var(--cyan-500);
+    color: ${(props) => props.chipColor};
   }
 `;
