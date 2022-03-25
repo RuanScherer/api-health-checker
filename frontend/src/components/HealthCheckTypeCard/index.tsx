@@ -7,25 +7,31 @@ import {
 } from "./styles";
 
 interface IHealthCheckTypeCardProps {
-  healthCheckType: {
+  onSelect: (healtCheckType: IHealthCheckType) => void;
+  healthCheckType: IHealthCheckType;
+}
+
+interface IHealthCheckType {
+  name: string;
+  logo: string;
+  category: {
     name: string;
-    logo: string;
-    type: {
-      name: string;
-      color: string;
-    };
+    color: string;
   };
 }
 
-function HealthCheckTypeCard({ healthCheckType }: IHealthCheckTypeCardProps) {
+function HealthCheckTypeCard({
+  onSelect,
+  healthCheckType,
+}: IHealthCheckTypeCardProps) {
   return (
     <Card>
       <HealthCheckTypeInfo>
-        <img src={healthCheckType.logo} alt="#" />
+        <img src={healthCheckType.logo} alt={healthCheckType.name} />
 
-        <HealthCheckTypeDescription>
+        <HealthCheckTypeDescription chipColor={healthCheckType.category.color}>
           <h2>{healthCheckType.name}</h2>
-          <span>{healthCheckType.type.name}</span>
+          <span>{healthCheckType.category.name}</span>
         </HealthCheckTypeDescription>
       </HealthCheckTypeInfo>
 
@@ -35,6 +41,7 @@ function HealthCheckTypeCard({ healthCheckType }: IHealthCheckTypeCardProps) {
         backgroundColor={colors.purple900}
         color={colors.white50}
         centralize
+        onClick={() => onSelect(healthCheckType)}
       >
         Select
       </FilledButton>

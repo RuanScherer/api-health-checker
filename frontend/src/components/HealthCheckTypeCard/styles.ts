@@ -39,7 +39,11 @@ export const HealthCheckTypeInfo = styled.div`
   }
 `;
 
-export const HealthCheckTypeDescription = styled.div`
+interface IHealthCheckTypeDescriptionProps {
+  chipColor: string;
+}
+
+export const HealthCheckTypeDescription = styled.div<IHealthCheckTypeDescriptionProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
