@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
     --cyan-500: ${colors.cyan500};
 
     --purple-900: ${colors.purple900};
+
+    --white-50: ${colors.white50};
   }
 
   * {
@@ -39,7 +41,11 @@ const GlobalStyle = createGlobalStyle`
   body, input, textarea, button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    color: #292929;
+    color: #040044;
+  }
+
+  *:not(input):not(textarea) {
+    cursor: default;
   }
 
   button {

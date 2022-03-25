@@ -9,6 +9,8 @@ const colors = {
   cyan500: "#39B4F3",
 
   purple900: "#625ED7",
+
+  white50: "#FFF",
 };
 
 export { colors };
