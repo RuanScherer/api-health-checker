@@ -7,7 +7,6 @@ export const Card = styled.article`
   justify-content: center;
 
   overflow: hidden;
-  margin: 1rem; /* remove */
   border-radius: 8px;
 
   &:hover {
