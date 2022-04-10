@@ -6,55 +6,5 @@ export const healthCheckTypes = [
     name: "MongoDB",
     logo: mongoDbLogo,
     category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
-  },
-  {
-    name: "MongoDB",
-    logo: mongoDbLogo,
-    category: healthCheckCategories.DATABASE,
   }
 ];
