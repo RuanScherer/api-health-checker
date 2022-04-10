@@ -42,6 +42,10 @@ const DefaultButton = styled.button<IDefaultButtonProps>`
   &:hover {
     filter: brightness(0.9);
   }
+
+  &, & * {
+    cursor: pointer;
+  }
 `;
 
 const iconButtonSizes = {
