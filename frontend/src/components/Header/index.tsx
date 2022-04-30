@@ -1,10 +1,7 @@
-import {
-  IoAdd,
-  IoSettingsOutline,
-  IoSwapVerticalOutline,
-} from "react-icons/io5";
+import { IoSettingsOutline, IoSwapVerticalOutline } from "react-icons/io5";
 
 import { FilledButton, IconButton } from "../../styles/shared/buttons";
+import { AddHealthCheckButton } from "../AddHealthCheckButton";
 import { ResponsiveIcon } from "../ResponsiveIcon";
 import { Content, Header as StyledHeader } from "./styles";
 
@@ -20,9 +17,7 @@ function Header() {
             <ResponsiveIcon icon={IoSwapVerticalOutline} />
           </FilledButton>
 
-          <IconButton>
-            <ResponsiveIcon icon={IoAdd} />
-          </IconButton>
+          <AddHealthCheckButton />
 
           <IconButton>
             <ResponsiveIcon icon={IoSettingsOutline} />
