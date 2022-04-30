@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { healthCheckTypes } from "../../shared/constants/healthCheckTypes";
 import { HealthCheckTypeCard } from "../HealthCheckTypeCard";
 import { HealthCheckSelectionContainer } from "./styles";
