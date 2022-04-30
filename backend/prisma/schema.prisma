@@ -2,11 +2,21 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
   previewFeatures = ["mongoDb"]
 }
 
 datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
+}
+
+model healthCheck {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  type String
+  name String
+  active Boolean
+  intervalInMinutes Int
+  databaseConnectionString String?
+  databaseCommand String?
 }
