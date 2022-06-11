@@ -1,9 +1,9 @@
 import { Router } from "express";
 
+import { healthCheckersroutes } from "./healthCheckers.routes";
+
 const router = Router();
 
-router.get("/", (request, response) => {
-  return response.json({ message: "Funcionou" });
-});
+router.use("/healthcheck", healthCheckersroutes);
 
 export { router };
